@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMkkubulimTTF-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'GmarketSansMedium';
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    min-width: 1320px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    cursor: none;
+}
+
+#drawing_line {
+    position: relative;
+    z-index: 1500;
+    height: 0;
+}
+
+#drawing_line>svg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#drawing_line>svg .drawing_line_polyline {
+    fill: none;
+    stroke: #FF4747;
+    stroke-width: 2;
+}
+
+#drawing_line>svg .drawing_line_circle {
+    fill: #FF4747;
+}
+
+/* 헤더 */
+.header {
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.header ul {
+    width: 1320px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px 0;
+}
+
+.header ul a {
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 22px 24px;
+}
+
+.header ul a:hover {
+    color: #ffffffd8;
+}
+
+header {
+    width: 100%;
+    height: 519px;
+    background: url(../images/header.png) no-repeat;
+}
+
+.n-point {
+    background: url(../images/point.png) no-repeat center;
+}
+
+.title {
+    width: 1320px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-family: 'GmarketSansMedium';
+    font-size: 60px;
+    margin-top: 60px;
+    font-weight: lighter;
+}
+
+.title p {
+    font-family: 'BMkkubulimTTF-Regular';
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* 소개말1 */
+.box1 {
+    width: 1320px;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.box1 ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 130px;
+}
+
+h2 {
+    font-family: 'BMkkubulimTTF-Regular';
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.box1 p {
+    font-family: 'GmarketSansMedium';
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.text1 {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.text2 {
+    text-align: right;
+    margin-right: 50px;
+}
+
+/* 소개말1 */
+.box2 {
+    width: 1320px;
+    margin: auto;
+    text-align: center;
+    background: url(../images/sub1/back.png) no-repeat 72px;
+    height: 883px;
+}
+
+h3 {
+    font-family: 'GmarketSansMedium';
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+.box2 div {
+    margin-top: 135px;
+    font-family: 'BMkkubulimTTF-Regular';
+    font-size: 50px;
+    font-weight: 300;
+}
+
+/* 푸터 */
+.footer {
+    background-color: #ECD8B1;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.footer-in {
+    display: flex;
+    width: 1320px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer a {
+    font-family: 'GmarketSansMedium';
+    font-size: 12px;
+    color: white;
+}
+
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-center {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.footer-right {
+    display: flex;
+    width: 75px;
+    justify-content: space-between;
+}
+
+/* 탑버튼 */
+.top_btn{
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+    z-index: 100;
+}
+
+/* 탑버튼 누르면 부드럽게 올라가기 */
+html {
+    scroll-behavior: smooth;
+}

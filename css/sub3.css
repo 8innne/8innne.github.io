@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMkkubulimTTF-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'GmarketSansMedium';
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    min-width: 1320px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    cursor: none;
+}
+
+#drawing_line {
+    position: relative;
+    z-index: 1500;
+    height: 0;
+}
+
+#drawing_line>svg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#drawing_line>svg .drawing_line_polyline {
+    fill: none;
+    stroke: #FF4747;
+    stroke-width: 2;
+}
+
+#drawing_line>svg .drawing_line_circle {
+    fill: #FF4747;
+}
+
+/* 헤더 */
+.header {
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.header ul {
+    width: 1320px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px 0;
+}
+
+.header ul a {
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 22px 24px;
+}
+
+.header ul a:hover {
+    color: #ffffffd8;
+}
+
+header {
+    width: 100%;
+    height: 519px;
+    background: url(../images/header.png) no-repeat;
+}
+
+.n-point {
+    background: url(../images/point.png) no-repeat center;
+}
+
+.title {
+    width: 1320px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-family: 'GmarketSansMedium';
+    font-size: 60px;
+    margin-top: 60px;
+    font-weight: lighter;
+}
+
+.title p {
+    font-family: 'BMkkubulimTTF-Regular';
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* 패키지 */
+.pack {
+    width: 1320px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+h2 {
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+    width: 370px;
+    height: 120px;
+    text-align: center;
+    font-family: 'BMkkubulimTTF-Regular';
+    font-size: 60px;
+    font-weight: 300;
+    background: url(../images/sub3/pack_back.png) no-repeat center;
+}
+
+.pack ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-text {
+    padding-top: 111px;
+    margin-left: 22px;
+}
+
+h3 {
+    font-family: 'GmarketSansMedium';
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.p-text p {
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+/* 굿즈 */
+
+.goods {
+    width: 1320px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+h4 {
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    width: 370px;
+    height: 120px;
+    text-align: center;
+    font-family: 'BMkkubulimTTF-Regular';
+    font-size: 60px;
+    font-weight: 300;
+    background: url(../images/sub3/goods_back.png) no-repeat center;
+}
+
+.goods ul {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1180px;
+}
+
+.goods ul li {
+    padding: 20px;
+}
+
+.goods ul li img {
+    box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 130px 0 0;
+}
+
+.goods ul div {
+    position: relative;
+}
+
+.goods ul div img:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.goods ul a:hover img:nth-child(2){
+    opacity: 1;
+}
+
+/* 푸터 */
+.footer {
+    background-color: #ECD8B1;
+    text-align: center;
+    margin-top: 130px;
+}
+
+.footer-in {
+    display: flex;
+    width: 1320px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer a {
+    font-family: 'GmarketSansMedium';
+    font-size: 12px;
+    color: white;
+}
+
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-center {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.footer-right {
+    display: flex;
+    width: 75px;
+    justify-content: space-between;
+}
+
+/* 탑버튼 */
+.top_btn{
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+    z-index: 100;
+}
+
+/* 탑버튼 누르면 부드럽게 올라가기 */
+html {
+    scroll-behavior: smooth;
+}
